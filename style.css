@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    -webkit-user-select: none; 
+  -ms-user-select: none;
+  user-select: none; 
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+  }
+  
+html{
+    overflow: auto;
+}
+body{
+    background-color: #009688;
+}
+.banner{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('img/banner-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#nav-opt{
+    display: none;
+}
+.nav{
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav .logo{
+    cursor: pointer;
+    width: 100px;
+    height: auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.nav ul li {
+    display: inline-block;
+    color: white;
+    list-style: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+.nav ul li{
+    position: relative;
+}
+.nav ul li::after{
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: #009688;
+    height: 3px;
+    width: 0%;
+    transition: 0.4s;
+}
+.nav ul li:hover::after{
+    width: 100%;
+}
+.content{
+    /* display: none; */
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+}
+.content h3{
+    margin-top: 100px;
+    font-weight: 500;
+    font-size: 70px;
+    text-shadow:  0 0 4px white;
+}
+.content p{
+    letter-spacing: 5px;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.content div button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border:2px solid #009688;
+    border-radius: 25px;
+    color: white;
+ position: relative;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.content div button span{
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+   background-color: #009688;
+   position: absolute;
+border-radius: 25px;
+   z-index: -1;
+   transition: 0.5s;
+}
+.content div button:hover span{
+    width: 100%;
+}
+.content div button:hover{
+    border: none;
+    box-shadow: 0 0 40px #009688;
+}
+.offers{
+    /* min-height: 100vh; */
+    margin: 40px 0;
+    display: grid;
+     gap: 20px; 
+     min-height:15rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    justify-items: stretch;
+   
+}
+.offers .offer-options{
+border-radius: 10px;
+text-align: center;
+overflow: hidden;
+    min-width: 100px;
+min-height: 200px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+position: relative;   
+transition: 0.5s;
+color: white;
+margin: 20px;
+}
+.offer-options:nth-child(2){
+    box-shadow: 0 0 40px #009688;
+    border: 3px solid #009688;
+    color: #009688;
+}
+    .offer-options:nth-child(2) p{
+        color: white;
+    font-weight: 300;
+}
+    .offer-options:nth-child(2) h4{
+    font-weight: 600;
+    text-shadow: 0 0 4px #009688;
+}
+.offer-options:nth-child(1){
+    box-shadow: 0 0 40px red;
+    border: 3px solid red;
+    color: red;
+}
+    .offer-options:nth-child(1) p{
+        color: white;
+    font-weight: 300;
+}
+    .offer-options:nth-child(1) h4{
+    font-weight: 600;
+    text-shadow: 0 0 4px red;
+}
+.offer-options:hover{
+    scale: 1.04;
+}
+   .offers .offer-options img{
+    width: 100%;
+    height: auto;
+    /* position: absolute; */
+   }
+   .offer-options h4{
+font-size: 20px;
+font-weight: 300;
+   }
+   .offer-options p{
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 2px;
+   }
+   .offer-b h5{
+    width: 100%;
+    letter-spacing: 10px;
+    text-shadow: 0 0 40px white;
+    font-weight: 400;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #009688;
+    text-align:center;
+   }
+.nav-show{
+ display: none;
+}
+.offer-b{
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://c4.wallpaperflare.com/wallpaper/428/45/96/digital-illustration-landscape-artwork-sunset-hd-wallpaper-preview.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.contact{
+    margin-top: 40px;
+    /* background-color: #009688; */
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('img/banner-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.contact div{
+    margin: 10px;
+    display: flex;
+}
+.contact h3{
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 0 0 4px white;
+    letter-spacing: 3px;
+}
+.contact p{
+    font-size: 20px;
+    font-weight: 200;
+line-height: 20px;
+    letter-spacing: 10px;
+}
+.contact{
+min-height: 100vh;
+    letter-spacing: 3px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: 2px solid #009688;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 40px #009688;
+    backdrop-filter: blur(100px);
+}
+.note{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #009688;
+}
+
+
+
+   @media (max-width:700px) {
+    .nav-show{
+        display: block;
+        margin: 15px auto;
+        z-index: 100;
+    }
+    .nav{
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav ul li{
+        padding: 10px 20px;
+        display: block;
+    }
+    .nav ul{
+        display: block;
+         position: fixed;
+   bottom: 0;
+         height: 100%;
+        margin: 0;
+        width: 100%;
+        background-color: #009688;
+        transition: 0.2s;
+        height: 0;
+        border-radius: 10px;
+        z-index: 100;
+    }
+    #nav-opt:checked ~ ul{
+       height: auto;
+    }
+    .contact p{
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    }
+   
